@@ -1,0 +1,16 @@
+//SPDX-License-Identifier:MIT
+contract structure{
+   struct Book{
+       uint id;
+       string name;
+       string author;
+   }
+   Book book;
+
+   function setBook() public{
+       book = Book(1,"Me","saloni");
+   }
+   function getname() public view returns(string memory){
+       return book.name;
+   }
+}
