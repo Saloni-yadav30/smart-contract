@@ -1,0 +1,20 @@
+//SPDX-License-Identifier:MIT
+contract discount{
+    enum customerType{VIP,Premium,regular}
+    customerType cust = customerType.VIP;
+
+    uint public discount;
+
+    function Cal_Discount() public{
+        if(cust == customerType.regular){
+            discount = 10;
+        }
+        else if(cust == customerType.Premium){
+            discount = 15;
+        }
+        else if(cust == customerType.VIP){
+            discount = 25;
+        }
+    }
+    
+}
