@@ -1,0 +1,11 @@
+
+pragma solidity ^0.8.9;
+contract Example {
+  uint i = 0;
+function doWhileLoop() public returns(uint) {
+do {
+      i++;
+    } while (i < 5);
+return i;
+  }
+}
