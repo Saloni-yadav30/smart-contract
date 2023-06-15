@@ -1,0 +1,13 @@
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+contract parent{
+    uint internal id;
+    function setValue(uint _value)public{
+        id=_value;
+    }
+}
+contract child is parent{
+    function getValue()public view returns(uint){
+        return id;
+    }
+}
