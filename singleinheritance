@@ -1,0 +1,19 @@
+pragma solidity ^0.8.9;
+contract parent{
+    uint internal id;
+    function setValue(uint _value)external{
+        id=_value;
+    }
+}
+contract child is parent{
+    function getValue() external view returns(uint){
+        return id;
+    }
+}
+contract caller{
+    child cc= new child();
+    function testInheritance(uint _input)public returns(uint){
+        cc.setValue(_input);
+        return cc.getValue();
+    }
+}
